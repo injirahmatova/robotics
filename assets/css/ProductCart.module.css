@@ -1,0 +1,20 @@
+.bottom {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.bottom .card {
+  width: 23%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  gap: 15px;
+}
+.bottom .card button {
+  background-color: #9d92ff;
+  padding: 15px 15px;
+  border: none;
+}

@@ -1,0 +1,58 @@
+.sectionTwo {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .containerTwo {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 30px 30px;
+    gap: 40px;
+  }
+  .top {
+    text-align: center;
+  }
+  .bottom {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .card {
+      width: 23%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      gap: 15px;
+      button {
+        background-color: #9d92ff;
+        padding: 15px 15px;
+        border: none;
+      }
+    }
+  }
+}
+@media screen and (min-width: 300px) and (max-width: 300px) {
+  .sectionTwo {
+    width: 100%;
+
+    .top {
+      width: 100%;
+    }
+    .bottom {
+      width: 100%;
+      flex-direction: column;
+
+      margin-top: 40px;
+
+      .card {
+        width: 100%;
+        margin-bottom: 40px;
+      }
+    }
+  }
+}
