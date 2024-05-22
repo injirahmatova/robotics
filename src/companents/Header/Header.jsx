@@ -2,9 +2,13 @@ import React from "react";
 import styles from "../Header/Header.module.scss";
 import { IoIosArrowDown } from "react-icons/io";
 import { GiHamburgerMenu } from "react-icons/gi";
+import { useNavigate } from "react-router-dom";
 
 
 const Header = () => {
+
+  const navigation=useNavigate('')
+  
   return (
     <div className={styles.header}>
       <div className={styles.container}>
@@ -17,13 +21,13 @@ const Header = () => {
         <div className={styles.nav}>
           <ul>
             <li>
-              <a href="">HOME</a>
+              <a href="" onClick={()=> navigation('/')} >HOME</a>
             </li>
             <li>
-              <a href="">ABOUT US</a>
+              <a href="" onClick={()=> navigation('/Basket')}  >BASKET</a>
             </li>
             <li>
-              <a href="">SERVICES</a>
+              <a href="" onClick={()=>navigation('/Wishlist')}>WISHLIST</a>
             </li>
             <li>
               <a href="">PRODUCTS</a>

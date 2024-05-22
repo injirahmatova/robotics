@@ -22,6 +22,18 @@ console.log(data);
     getdata();
   }, []);
 
+  const addToBasket = (item) => {
+    axios.post('https://664d9087ede9a2b55653ebb7.mockapi.io/basket/basket', item)
+  }
+
+  const addToWishlist = (item) => {
+    axios.post('https://664d9087ede9a2b55653ebb7.mockapi.io/basket/basket', item)
+  }
+
+
+
+
+
   return (
     <div>
       <Header />
@@ -32,7 +44,7 @@ console.log(data);
         <p>Who are in extremely love with eco friendly system.</p>
       </div>
       <div className={styles.products}>
-        {data && data.map(item => <ProductCart key={item.id} item={item} />)}
+        {data && data.map(item => <ProductCart key={item.id} item={item} addToBasket={() => addToBasket(item)}  addToWishlist={()=>addToWishlist (item)}/>)}
       </div>
     </div>
   );

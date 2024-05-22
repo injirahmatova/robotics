@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
-import CardBasket from '../../companents/ProductCart/CardBasket'
-import styles from './Basket.module.scss'
+import CardWishlist from '../../companents/ProductCart/CardBasket'
+import styles from './Wishlist.module.scss'
 import Header from '../../companents/Header/Header'
 
-const Basket = () => {
+const Wishlist = () => {
  const [data, setData]=useState([])
 
  const getData=()=>{
@@ -27,11 +27,11 @@ const deleteItem=(id)=>{
     <div>
     <Header/>
     <div className={styles.title} >
-            <h1>BASKET</h1>
+            <h1>Wishlist</h1>
          </div>
         <div className={styles.products}>
             {
-                data && data.map(item=> <CardBasket key={item} item={item} sil={()=>deleteItem(item.id)}/>)
+                data && data.map(item=> <CardWishlist key={item} item={item} sil={()=>deleteItem(item.id)}/>)
                 
             }
         </div>
@@ -40,4 +40,4 @@ const deleteItem=(id)=>{
   )
 }
 
-export default Basket
+export default Wishlist

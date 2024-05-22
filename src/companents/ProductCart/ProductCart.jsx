@@ -1,8 +1,8 @@
 import React from "react";
 import styles from "../ProductCart/ProductCart.module.scss";
-import { CiHeart } from "react-icons/ci";
 
-const ProductCart = ({ item, AddToBasket, sil }) => {
+
+const ProductCart = ({ item, addToBasket, addToWishlist }) => {
   return (
     <div className={styles.card}>
       <img className={styles.img1} src={item.thumbnail} alt="img" />
@@ -10,8 +10,8 @@ const ProductCart = ({ item, AddToBasket, sil }) => {
         <h4>{item.title}</h4>
         <p>{item.price}</p>
         <div className={styles.btns}>
-          <button onClick={AddToBasket}> Add to cart </button>
-          <button onClick={sil}><CiHeart /></button>
+          <button onClick={addToBasket}>Add to cart</button>
+          <button onClick={addToWishlist}>Add to wishlist</button>
         </div>
       </div>
     </div>
